@@ -3,6 +3,13 @@
 
 Conducted an in-depth data analysis project utilizing Microsoft SQL to extract valuable insights and performed Recency-Frequency-Monetary (RFM) segmentation. Leveraged Tableau for effective visualization of findings and actionable recommendations.
 
+
+
+Below the snapshot of the Tableau Presentation:
+<img width="760" alt="1" src="https://github.com/sumit-kumar-crypto/Microsoft-SQL-Data-Analysis-and-RFM-Segmentation/assets/83686292/f144bb8c-8fcb-4197-9f54-029139d535b1">
+<img width="758" alt="2" src="https://github.com/sumit-kumar-crypto/Microsoft-SQL-Data-Analysis-and-RFM-Segmentation/assets/83686292/299777a6-7a2e-4282-b818-077f7e173b1b">
+
+
 **Performed analysis in MS SQL is following:**
 
 
@@ -114,9 +121,6 @@ select CUSTOMERNAME , rfm_recency, rfm_frequency, rfm_monetary,
 from #rfm
 
 
-Below the snapshot of the Tableau Presentation:
 
-<img width="760" alt="1" src="https://github.com/sumit-kumar-crypto/Microsoft-SQL-Data-Analysis-and-RFM-Segmentation/assets/83686292/f144bb8c-8fcb-4197-9f54-029139d535b1">
 
-<img width="758" alt="2" src="https://github.com/sumit-kumar-crypto/Microsoft-SQL-Data-Analysis-and-RFM-Segmentation/assets/83686292/299777a6-7a2e-4282-b818-077f7e173b1b">
 

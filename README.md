@@ -3,14 +3,14 @@
 
 Conducted an in-depth data analysis project utilizing Microsoft SQL to extract valuable insights and performed Recency-Frequency-Monetary (RFM) segmentation. Leveraged Tableau for effective visualization of findings and actionable recommendations.
 
-Performed analysis in MS SQL is following:
+**Performed analysis in MS SQL is following:**
 
 
----DATA OVERLOOK:
+_---DATA OVERLOOK:_
 
 select * from sales_data_sample
 
----UNIQUE VALUE CHECK:
+_---UNIQUE VALUE CHECK:_
 
 select distinct status from sales_data_sample
 select distinct year_id from sales_data_sample
@@ -19,31 +19,31 @@ select distinct TERRITORY from sales_data_sample
 select distinct DEALSIZE from sales_data_sample
 select distinct PRODUCTLINE from sales_data_sample
 
----DATA ANALYSIS
+_---DATA ANALYSIS_
 
 
----Year Wise Production:
+_---Year Wise Production:_
 
 select YEAR_ID,SUM(sales) as REVENUE
 from sales_data_sample
 group by YEAR_ID
 ORDER BY 2 DESC
 
----Grouping Sales by PRODUCTLINE:
+_---Grouping Sales by PRODUCTLINE:_
 
 select PRODUCTLINE,SUM(sales) as REVENUE
 from sales_data_sample
 group by PRODUCTLINE
 ORDER BY 2 DESC
 
----Examining the number of months Sales was active in different years:
+_---Examining the number of months Sales was active in different years:_
 
 select YEAR_ID,count(distinct(MONTH_ID)) FROM sales_data_sample
 group by YEAR_ID
 
 
 
----Months with highest number of REVENUE generated:
+_---Months with highest number of REVENUE generated:_
 
 select YEAR_ID,MONTH_ID,SUM(sales) as REVENUE,COUNT(ORDERNUMBER) AS FREQUENCY
 from sales_data_sample
@@ -51,7 +51,7 @@ group by YEAR_ID,MONTH_ID
 ORDER BY 3 DESC
 
 
----Highest Revenue being generated in November and October,Let's examine the PRODUCTLINE of those months:
+_---Highest Revenue being generated in November and October,Let's examine the PRODUCTLINE of those months:_
 
 select YEAR_ID,MONTH_ID,PRODUCTLINE,SUM(sales) as REVENUE,COUNT(ORDERNUMBER) AS FREQUENCY
 from sales_data_sample
@@ -61,7 +61,7 @@ ORDER BY 4 DESC
 
 
 
----DEALSIZE proportion according to REVENUE generated:
+_---DEALSIZE proportion according to REVENUE generated:_
 
 select DEALSIZE,SUM(sales) as REVENUE
 from sales_data_sample
@@ -69,7 +69,7 @@ group by DEALSIZE
 ORDER BY 2 DESC
 
 
----Finding out the best customer with RFM Analysis:
+_---Finding out the best customer with RFM Analysis:_
 
 
 DROP TABLE IF EXISTS #rfm
